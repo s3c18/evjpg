@@ -29,6 +29,7 @@ def banner():
 	     `-'       `--' hjm"""
 	print(b)
 def main():
+	engine.init()
 	print(colors.WARNING)
 	banner()
 	print(colors.ENDC)
