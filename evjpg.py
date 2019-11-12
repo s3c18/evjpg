@@ -1,4 +1,4 @@
-import engine, sys
+import engine, sys, requests
 
 class colors:
 	HEADER = '\033[95m'
@@ -31,9 +31,10 @@ def banner():
 def main():
 	print(colors.WARNING)
 	banner()
+	engine.run(None, None, None)
 	print(colors.ENDC)
 	ip = input(colors.OKBLUE + '[---] IP : ' + colors.ENDC)
 	port = int(input(colors.OKBLUE + '[---] PORT : ' + colors.ENDC))
 	victim = input(colors.OKBLUE + '[---] IP OF VICTIM : ' + colors.ENDC)
-	engine.run(ip, port, victim)
+	#engine.run(ip, port, victim)
 main()
